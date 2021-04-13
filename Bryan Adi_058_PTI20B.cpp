@@ -1,0 +1,74 @@
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+using namespace std;
+ 
+
+
+
+class RetailItem
+{
+private:
+   string description;  
+   int unitsOnHand;     
+   double price;        
+    
+public:
+
+   RetailItem(string d, int u, double p)
+      { description = d; unitsOnHand = u; price = p; }
+    
+
+   void setDescription(string d)
+      { description = d; }
+    
+   void setUnitsOnHand(int u)
+      { unitsOnHand = u; }
+       
+   void setPrice(double p)
+      { price = p; }
+       
+
+   string getDescription()
+      { return description; }
+       
+   int getUnitsOnHand()
+      { return unitsOnHand; }
+    
+   double getPrice()
+      { return price; }
+};
+ 
+
+void displayItem(RetailItem);
+ 
+int main()
+{
+
+	cout<<"No 2 "<<endl;
+	cout<<"Bryan Adi Prakoso_058_PTI20B "<<endl;
+	cout<<"                        "<<endl;
+	
+   RetailItem item1("jaket", 12, 59.95);
+   RetailItem item2("Desain Jeans", 40, 34.95);
+   RetailItem item3("baju", 20, 24.95);
+    
+
+   displayItem(item1);
+   displayItem(item2);
+   displayItem(item3);
+    
+   return 0;
+}
+ 
+ 
+void displayItem(RetailItem item)
+{
+   cout << setprecision(2) << fixed << showpoint;
+   cout << "Deskripsi : " << item.getDescription() << endl;
+   cout << "Barang yang ada dibawa : " << item.getUnitsOnHand() << endl;
+   cout << "Harga : $ " << item.getPrice() << endl << endl;
+}
+
+
